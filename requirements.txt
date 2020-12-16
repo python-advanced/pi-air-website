@@ -1,0 +1,14 @@
+Package              Version
+-------------------- ---------
+chart-studio         1.1.0
+dash                 1.18.1
+dash-core-components 1.14.1
+dash-html-components 1.1.1
+dash-renderer        1.8.3
+dnspython            2.0.0
+gunicorn             20.0.4
+numpy                1.19.3
+pandas               1.1.5
+plotly               4.14.1
+pymongo              3.11.2
+pytz                 2020.4
