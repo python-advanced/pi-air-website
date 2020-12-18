@@ -2,14 +2,11 @@ import dash
 import dash_core_components as dcc
 import dash_html_components as html
 from dash.dependencies import Input, Output
-import chart_studio
 
 from db_wrapper import DbWrapper
 from get_graphs import get_graphs
 from utils import get_account_text
 
-
-chart_studio.tools.set_credentials_file(username='allen0139', api_key='Ccu6v4zeBuoNVGOs3YTc')
 
 external_stylesheets = ["https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css",
                         "https://cdn.rawgit.com/yclliu/dash-css/37c322c/main.css"]
@@ -27,9 +24,9 @@ content = [
 
     html.Div(children=html.Div(id='main-graphs'), className='row'),
     dcc.Interval(id='interval-component-main', interval=30 * 1000, n_intervals=0),
+    html.Div(children=html.Div(id='graphs'), className='row'),
     dcc.Interval(id='interval-component', interval=3 * 1000, n_intervals=0),
 
-    html.Div(children=html.Div(id='graphs'), className='row'),
     html.Footer(html.Div(html.Div(
         html.Div(html.Span('Python-Advanced Course Pi-Air Project'), className='col-sm-8 col-sm-offset-2 text-center'),
         className='row'), className='container'), className='footer-padding')

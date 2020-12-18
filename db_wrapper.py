@@ -56,7 +56,6 @@ class DbWrapper:
         # self.db.air.remove({})
         day_ago = datetime.now(timezone.utc) + timedelta(days=-10)
         self.db.air.remove()
-        self.db.tgs.remove()
         print('done')
         # self.db.air.remove({'at': {'$lte': day_ago}})
         # self.db.tgs.remove({'at': {'$lte': day_ago}})
